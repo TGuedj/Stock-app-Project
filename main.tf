@@ -50,7 +50,7 @@ resource "aws_security_group" "app_sg" {
     from_port   = 27017
     to_port     = 27017
     protocol    = "tcp"
-    cidr_blocks = ["5.29.141.144/32", "10.1.0.0/16"]
+    cidr_blocks = [outsider_ip, "10.1.0.0/16"]
     description = "Allow traffic to MongoDB from specified IP and within VPC"
   }
 
@@ -59,7 +59,7 @@ resource "aws_security_group" "app_sg" {
     from_port   = 8081
     to_port     = 8081
     protocol    = "tcp"
-    cidr_blocks = ["5.29.141.144/32", "10.1.0.0/16"]
+    cidr_blocks = [outsider_ip, "10.1.0.0/16"]
     description = "Allow traffic to Mongo Express from specified IP and within VPC"
   }
 
@@ -68,7 +68,7 @@ resource "aws_security_group" "app_sg" {
     from_port   = 9080
     to_port     = 9080
     protocol    = "tcp"
-    cidr_blocks = ["5.29.141.144/32", "10.1.0.0/16"]
+    cidr_blocks = [outsider_ip, "10.1.0.0/16"]
     description = "Allow traffic to Promtail from specified IP and within VPC"
   }
 
@@ -77,7 +77,7 @@ resource "aws_security_group" "app_sg" {
     from_port   = 3000
     to_port     = 3000
     protocol    = "tcp"
-    cidr_blocks = ["5.29.141.144/32", "10.1.0.0/16"]
+    cidr_blocks = [outsider_ip, "10.1.0.0/16"]
     description = "Allow traffic to Grafana from specified IP and within VPC"
   }
 
@@ -86,7 +86,7 @@ resource "aws_security_group" "app_sg" {
     from_port   = 3100
     to_port     = 3100
     protocol    = "tcp"
-    cidr_blocks = ["5.29.141.144/32", "10.1.0.0/16"]
+    cidr_blocks = [outsider_ip, "10.1.0.0/16"]
     description = "Allow traffic to Loki from specified IP and within VPC"
   }
 
@@ -95,7 +95,7 @@ resource "aws_security_group" "app_sg" {
     from_port   = 8000
     to_port     = 8000
     protocol    = "tcp"
-    cidr_blocks = ["5.29.141.144/32", "10.1.0.0/16"]
+    cidr_blocks = [outsider_ip, "10.1.0.0/16"]
     description = "Allow traffic to Prometheus metrics from specified IP and within VPC"
   }
 

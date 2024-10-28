@@ -18,6 +18,13 @@ variable "vpc_cidr" {
 
 }
 
+variable "outsider_ip" {
+  description = "The AWS vpc cidr block"
+  type        = string
+  default     = "0.0.0.0" #please change this ip to your bation to get access 
+
+}
+
 
 variable "instance_names" {
   type    = list(string)
