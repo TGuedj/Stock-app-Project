@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ![Logo](https://cdn.iconscout.com/icon/premium/png-256-thumb/stock-prediction-5915866-4918534.png)
 
@@ -108,3 +109,6 @@ AI Stock Trading is an advanced application that leverages artificial intelligen
 ## 📜 License
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+=======
+# Stock-app-Project
+>>>>>>> d85acde291bfe09fbbd97143fa35ad107e8511af
