@@ -138,5 +138,3 @@ module "web_instance" {
     Name        = each.key
   }
 }
-
-
