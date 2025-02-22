@@ -21,7 +21,7 @@ variable "vpc_cidr" {
 variable "outsider_ip" {
   description = "The AWS vpc cidr block"
   type        = string
-  default     = "0.0.0.0" #please change this ip to your bation to get access 
+  default     = "0.0.0.0" 
 
 }
 
@@ -44,7 +44,7 @@ resource "aws_security_group" "instance_sg" {
     from_port       = 80
     to_port         = 80
     protocol        = "tcp"
-    security_groups = [aws_security_group.alb_sg.id] # Reference ALB SG
+    security_groups = [aws_security_group.alb_sg.id] 
     description     = "Allow HTTP from ALB"
   }
 
