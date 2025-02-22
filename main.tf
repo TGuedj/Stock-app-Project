@@ -5,11 +5,10 @@ module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
 
   name = "my-vpc"
-  cidr = "10.1.0.0/16"  # Update to match the VPC CIDR block
-
+  cidr = "10.1.0.0/16"  
   azs                = ["us-east-1a", "us-east-1b"]
   private_subnets    = ["10.1.3.0/24", "10.1.4.0/24", "10.1.5.0/24", "10.1.6.0/24"]  # Updated private subnets
-  public_subnets     = ["10.1.1.0/24", "10.1.2.0/24"]  # Updated public subnets
+  public_subnets     = ["10.1.1.0/24", "10.1.2.0/24"]  
   enable_nat_gateway = true
   create_igw         = true
 
@@ -50,7 +49,7 @@ resource "aws_security_group" "app_sg" {
     from_port   = 27017
     to_port     = 27017
     protocol    = "tcp"
-    cidr_blocks = ["5.29.141.144/32", "10.1.0.0/16"]
+    cidr_blocks = [""DESIRED IP,"10.1.0.0/16"]
     description = "Allow traffic to MongoDB from specified IP and within VPC"
   }
 
@@ -59,7 +58,7 @@ resource "aws_security_group" "app_sg" {
     from_port   = 8081
     to_port     = 8081
     protocol    = "tcp"
-    cidr_blocks = ["5.29.141.144/32", "10.1.0.0/16"]
+    cidr_blocks = ["DESIRED IP", "10.1.0.0/16"]
     description = "Allow traffic to Mongo Express from specified IP and within VPC"
   }
 
@@ -68,7 +67,7 @@ resource "aws_security_group" "app_sg" {
     from_port   = 9080
     to_port     = 9080
     protocol    = "tcp"
-    cidr_blocks = ["5.29.141.144/32", "10.1.0.0/16"]
+    cidr_blocks = ["DESIRED IP", "10.1.0.0/16"]
     description = "Allow traffic to Promtail from specified IP and within VPC"
   }
 
@@ -77,7 +76,7 @@ resource "aws_security_group" "app_sg" {
     from_port   = 3000
     to_port     = 3000
     protocol    = "tcp"
-    cidr_blocks = ["5.29.141.144/32", "10.1.0.0/16"]
+    cidr_blocks = ["DESIRED IP", "10.1.0.0/16"]
     description = "Allow traffic to Grafana from specified IP and within VPC"
   }
 
@@ -86,7 +85,7 @@ resource "aws_security_group" "app_sg" {
     from_port   = 3100
     to_port     = 3100
     protocol    = "tcp"
-    cidr_blocks = ["5.29.141.144/32", "10.1.0.0/16"]
+    cidr_blocks = ["DESIRED IP", "10.1.0.0/16"]
     description = "Allow traffic to Loki from specified IP and within VPC"
   }
 
@@ -95,7 +94,7 @@ resource "aws_security_group" "app_sg" {
     from_port   = 8000
     to_port     = 8000
     protocol    = "tcp"
-    cidr_blocks = ["5.29.141.144/32", "10.1.0.0/16"]
+    cidr_blocks = ["DESIRED IP", "10.1.0.0/16"]
     description = "Allow traffic to Prometheus metrics from specified IP and within VPC"
   }
 
